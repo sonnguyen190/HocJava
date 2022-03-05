@@ -1,0 +1,20 @@
+package main;
+
+public class HelloWorld {
+//căn dòng ctr shift F
+//xoa 1 dòng ctrl D
+//gợi ý là Ctrl space
+// tu động import ctrl shift o
+// git init --> khoi tao
+//	git add README.md
+// git commit -m "first commit"
+//	git branch -M main
+//	git remote add origin https://github.com/sonnguyen190/HocJava.git
+//	git push -u origin main
+	public static void main(String[] args) {
+		int age = 18;
+
+		System.out.println("hello hihihi" + age);
+	}
+
+}
