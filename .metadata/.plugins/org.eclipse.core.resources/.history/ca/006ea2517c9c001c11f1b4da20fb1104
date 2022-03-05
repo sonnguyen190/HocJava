@@ -16,7 +16,6 @@ public class baitap {
 		System.out.println("thương là "+tinhthuong(a,b));
 		System.out.println("Chu vi hình chữ nhật là "+chuvihinhchunhat(length,width));
 		System.out.println("Diện Tích hình chữ nhật là "+dientichhinhchunhat(length,width));
-		myName();
 		
 		
 		
@@ -24,9 +23,6 @@ public class baitap {
 	public static int tinhtong(int firstNum , int secondNum) {
 		int a= firstNum+secondNum ;
 		return a;
-	}
-	public static void myName() {
-		System.out.println("Nguyễn Văn Lâm Sơn");
 	}
 	public static int tinhhieu(int firstNum , int secondNum) {
 		int a= firstNum-secondNum ;

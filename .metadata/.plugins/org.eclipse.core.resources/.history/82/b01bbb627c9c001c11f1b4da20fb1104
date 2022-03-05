@@ -16,7 +16,6 @@ public class baitap {
 		System.out.println("thương là "+tinhthuong(a,b));
 		System.out.println("Chu vi hình chữ nhật là "+chuvihinhchunhat(length,width));
 		System.out.println("Diện Tích hình chữ nhật là "+dientichhinhchunhat(length,width));
-		myName();
 		
 		
 		
