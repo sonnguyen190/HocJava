@@ -1,0 +1,31 @@
+package main;
+
+public class baitap {
+
+	public static void main(String[] args) {
+		byte so1 = 1;
+		short so2 = 2;
+		int so3 = 3;
+		long so4= 4;
+		float floatt = 5.1f;
+		double doublee = 6.2;
+		boolean bolem = true;
+		char cha = 's';
+		String chuoi = "dhgjksd";
+		
+		System.out.println(so1);
+		System.out.println(so2);
+		System.out.println(so3);
+		System.out.println(so4);
+		System.out.println(floatt);
+		System.out.println(doublee);
+		System.out.println(bolem);
+		System.out.println(cha);
+		System.out.println(chuoi);
+		
+	}
+	public static void main2(String[] args) {
+		int sotien = 100000;
+	}
+
+}

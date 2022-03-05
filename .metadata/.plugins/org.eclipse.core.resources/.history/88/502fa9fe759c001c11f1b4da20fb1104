@@ -1,0 +1,19 @@
+package main;
+
+public class baitap {
+
+	public static void main(String[] args) {
+		byte so1 = 1;
+		short so2 = 2;
+		int so3 = 3;
+		long so4= 4;
+		float floatt = 5.1f;
+		double doublee = 6.2;
+		boolean bolem = true;
+		char cha = 's';
+		String chuoi = "dhgjksd";
+		
+		System.out.println(so1+so2);
+	}
+
+}

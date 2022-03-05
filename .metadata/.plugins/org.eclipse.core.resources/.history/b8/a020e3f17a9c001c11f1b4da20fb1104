@@ -1,0 +1,48 @@
+package main;
+
+public class baitap {
+
+	public static void main(String[] args) {
+	int a = 500;
+	int b = 200;
+	int length =5;
+	int width =4;
+	
+		
+		
+		System.out.println("tổng là "+tinhtong(a,b));
+		System.out.println("hiệu là "+tinhhieu(a,b));
+		System.out.println("tích là "+tinhtich(a,b));
+		System.out.println("thương là "+tinhthuong(a,b));
+		System.out.println("Chu vi hình chữ nhật là"+chuvihinhchunhat(length,width));
+		
+		
+		
+	}
+	public static int tinhtong(int firstNum , int secondNum) {
+		int a= firstNum+secondNum ;
+		return a;
+	}
+	public static int tinhhieu(int firstNum , int secondNum) {
+		int a= firstNum-secondNum ;
+		return a;
+	}
+	public static int tinhtich(int firstNum , int secondNum) {
+		int a= firstNum*secondNum ;
+		return a;
+	}
+	public static float tinhthuong(float firstNum , float secondNum) {
+		float a= firstNum/secondNum ;
+		return a;
+	}
+	public static int chuvihinhchunhat(int length , int width) {
+		int a= 2*(length+width) ;
+		return a;
+	}
+	public static int dientichhinhchunhat(int length , int width) {
+		int a= length*width ;
+		return a;
+	}	
+	
+
+}
