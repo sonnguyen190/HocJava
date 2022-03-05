@@ -1,14 +1,16 @@
 package main;
 
 public class baitap {
-
+	//biến hằng là khi gán giá trị thì nó sẽ không thay đổi những lần sau(khai báo với từ khóa final)
+static int age = 20;
 	public static void main(String[] args) {
 	int a = 500;
 	int b = 200;
 	int length =5;
 	int width =4;
 	
-		
+	
+	
 		
 		System.out.println("tổng là "+tinhtong(a,b));
 		System.out.println("hiệu là "+tinhhieu(a,b));
@@ -20,6 +22,7 @@ public class baitap {
 		
 		
 		
+		
 	}
 	public static int tinhtong(int firstNum , int secondNum) {
 		int a= firstNum+secondNum ;
@@ -27,6 +30,7 @@ public class baitap {
 	}
 	public static void myName() {
 		System.out.println("Nguyễn Văn Lâm Sơn");
+		System.out.println("tôi "+age+" tuổi");
 	}
 	public static int tinhhieu(int firstNum , int secondNum) {
 		int a= firstNum-secondNum ;
@@ -47,7 +51,13 @@ public class baitap {
 	public static int dientichhinhchunhat(int length , int width) {
 		int a= length*width ;
 		return a;
-	}	
+	}
+	
+	
+	
+ 	
+
+
 	
 
 }
