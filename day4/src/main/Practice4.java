@@ -6,12 +6,14 @@ public class Practice4 {
 
 	public static void main(String[] args) {
 		tinhDiemTrungBinh();
-
 		tinhTongN();
 		tinhTongX();
 		kiemTraSoNguyenTo();
 		lietKeSoNguyenTo();
 		uocSoLeLonNhat();
+		tongUocSoChan();
+		tongChuSoChan();
+
 	}
 
 	public static void tinhDiemTrungBinh() {
@@ -34,9 +36,9 @@ public class Practice4 {
 		int n = scanner.nextInt();
 		System.out.println("chạy tới số mấy thì ngưng?");
 		int end = scanner.nextInt();
-		int tong=0;
+		int tong = 0;
 		for (int i = n; i < end + 1; i++) {
-		      tong+=i;
+			tong += i;
 		}
 		System.out.println(tong);
 
@@ -44,7 +46,7 @@ public class Practice4 {
 
 	public static void tinhTongX() {
 		int tong = 0;
-		int lt = 1;
+		int luyThua = 1;
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("mời nhập X: ");
 		int x = scanner.nextInt();
@@ -52,8 +54,8 @@ public class Practice4 {
 		int n = scanner.nextInt();
 
 		for (int i = 1; i <= n; i++) {
-			lt = lt * x; // gán số mới vào biến lt khi vòng lặp chạy lại x^1,x^2...
-			tong += lt;
+			luyThua = luyThua * x; // gán số mới vào biến lt khi vòng lặp chạy lại x^1,x^2...
+			tong += luyThua;
 
 		}
 		System.out.println(tong);
@@ -114,6 +116,37 @@ public class Practice4 {
 			}
 		}
 
+	}
+
+	public static void tongUocSoChan() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("mời nhập n: ");
+		int n = scanner.nextInt();
+		int tong = 0;
+		for (int i = 1; i <= n / 2; i++) {
+			if (i % 2 == 0 && n % i == 0) {
+				System.out.println(i);
+				tong += i;
+			}
+		}
+		System.out.println("Tổng là" + tong);
+	}
+
+	public static void tongChuSoChan() {
+		int n;
+		int sum = 0;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("mời nhập n: ");
+		n = scanner.nextInt();
+		while (n != 0) {
+			int vitriCuoi = n % 10;
+			if (vitriCuoi % 2 == 0) {
+				sum += vitriCuoi;
+			}
+			n = n / 10;
+		}
+
+		System.out.println("Tổng các số chẵn nguyên dương là: " + sum);
 	}
 
 }
