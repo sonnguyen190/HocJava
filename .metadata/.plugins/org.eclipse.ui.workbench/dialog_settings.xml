@@ -9,4 +9,6 @@
 			<item value="org.eclipse.emf.codegen.ui.JETNewWizards"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+	</section>
 </section>
