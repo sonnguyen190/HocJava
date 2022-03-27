@@ -7,7 +7,7 @@ import com.model.*;
 public class Main {
 
 	public static void main(String[] args) {
-		Student student = new Student();
+		Student 	 = new Student();
 		Teacher teacher = new Teacher();
 		SoHoc sohoc = new SoHoc(10, 10);
 		PhanSo phanso1 = new PhanSo(1, 2);
