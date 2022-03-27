@@ -14,21 +14,26 @@ public class Student {
 	}
 
 	public Student(int id, String name, String dob, int math, int literature) {
-
+		this.id=id;
+		this.name=name;
+		this.dob=dob;
+		this.math=math;
+		this.literature=literature;
 	}
 
 	public void inputInfo() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("moi nhap id: ");
-		this.id=scanner.nextInt();
-		System.out.println("moi nhap ten: ");
-		this.name = scanner.next();
-		System.out.println("moi nhap ngày tháng năm sinh: ");
-		this.dob = scanner.next();
-		System.out.println("moi nhap diem toan: ");
-		this.math = scanner.nextInt();
-		System.out.println("moi nhập diem van");
-		this.literature = scanner.nextInt();
+//		Scanner scanner = new Scanner(System.in);
+//		System.out.println("moi nhap id: ");
+//		this.id=scanner.nextInt();
+//		System.out.println("moi nhap ten: ");
+//		this.name = scanner.next();
+//		System.out.println("moi nhap ngày tháng năm sinh: ");
+//		this.dob = scanner.next();
+//		System.out.println("moi nhap diem toan: ");
+//		this.math = scanner.nextInt();
+//		System.out.println("moi nhập diem van");
+//		this.literature = scanner.nextInt();
+		
 		
 	}
 	public String displayInfo() {

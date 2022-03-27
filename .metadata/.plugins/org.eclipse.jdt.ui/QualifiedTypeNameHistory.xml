@@ -4,10 +4,12 @@
     <fullyQualifiedTypeName name="main.WeekDay"/>
     <fullyQualifiedTypeName name="com.model.Teacher"/>
     <fullyQualifiedTypeName name="com.model.Book"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.model.PhanSo"/>
     <fullyQualifiedTypeName name="com.model.Person"/>
     <fullyQualifiedTypeName name="com.model.Employee"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.model.Student"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.service.StudentService"/>
 </qualifiedTypeNameHistroy>
