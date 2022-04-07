@@ -5,11 +5,16 @@
     <fullyQualifiedTypeName name="com.model.Teacher"/>
     <fullyQualifiedTypeName name="com.model.Book"/>
     <fullyQualifiedTypeName name="com.model.PhanSo"/>
-    <fullyQualifiedTypeName name="com.model.Person"/>
     <fullyQualifiedTypeName name="com.model.Employee"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="com.model.Student"/>
     <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.service.StudentService"/>
+    <fullyQualifiedTypeName name="com.model.Lion"/>
+    <fullyQualifiedTypeName name="com.model.Dog"/>
+    <fullyQualifiedTypeName name="com.model.BabyDog"/>
+    <fullyQualifiedTypeName name="com.model.Animal"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="day12.Person"/>
+    <fullyQualifiedTypeName name="com.model.Student"/>
+    <fullyQualifiedTypeName name="com.model.Person"/>
 </qualifiedTypeNameHistroy>

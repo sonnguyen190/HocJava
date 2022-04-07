@@ -25,7 +25,7 @@ public class Practice6 {
 			System.out.println(S);
 		}
 		System.out.println(S);
-//	}
+	}
 	
 	public static void tichUocSoLe() {
 		int tich=1;
