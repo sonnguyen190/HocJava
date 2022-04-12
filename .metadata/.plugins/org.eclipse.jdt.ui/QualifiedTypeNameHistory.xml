@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="com.model.Teacher"/>
     <fullyQualifiedTypeName name="com.model.Book"/>
     <fullyQualifiedTypeName name="com.model.PhanSo"/>
-    <fullyQualifiedTypeName name="com.model.Employee"/>
     <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.service.StudentService"/>
@@ -13,8 +12,21 @@
     <fullyQualifiedTypeName name="com.model.Dog"/>
     <fullyQualifiedTypeName name="com.model.BabyDog"/>
     <fullyQualifiedTypeName name="com.model.Animal"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="day12.Person"/>
     <fullyQualifiedTypeName name="com.model.Student"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="com.model.Person"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="com.dao.EmployeeExperienceDao"/>
+    <fullyQualifiedTypeName name="com.service.impl.EmployeeServiceImpl"/>
+    <fullyQualifiedTypeName name="com.service.EmployeeExperienceService"/>
+    <fullyQualifiedTypeName name="com.dao.impl.EmployeeExperienceDaoImpl"/>
+    <fullyQualifiedTypeName name="com.model.Employee"/>
+    <fullyQualifiedTypeName name="com.model.EmployeeExperience"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.service.impl.EmployeeExperienceServiceImpl"/>
 </qualifiedTypeNameHistroy>
