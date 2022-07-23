@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>JavaScript CRUD Example Tutorial</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
+<script src="${pageContext.request.contextPath}/js/script.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+</head>
+
+<body onload="myFunction()">
+
+	<h1>JavaScript CRUD Example Tutorial</h1>
+	<hr>
+	<div class="employee-form">
+		<!-- khi bấm vào nút Submit trong form này thì nó sẽ gửi 1 request là ...
+		event.preventDefault() dùng để chặn ko cho nó gửi request này =>chỉ thực hiện phương thức onFormSubmit()-->
+		<form onsubmit="event.preventDefault(); onFormSubmit();"
+			autocomplete="off">
+			<div>
+				<label>SSN*</label><label class="validation-error hide"	id="ssnValidationError">This field is required.</label>
+				<input type="text" name="ssn" id="ssn">
+			</div>
+			<div>
+				<label>Name</label> 
+				<input type="text" name="name" id="name">
+			</div>
+			<div>
+				<label>Salary</label> 
+				<input type="text" name="salary" id="salary">
+			</div>
+			<div>
+				<label>Department</label>
+				<input type="text" name="department" id="department">
+			</div>
+			<div class="form-action-buttons">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+	<br />
+	<div class="employees-table">
+		<table class="list" id="employeeList">
+			<tr>
+				<th>SSN</th>
+				<th>Name</th>
+				<th>Salary</th>
+				<th>Department</th>
+				<th>Actions</th>
+			</tr>
+			
+			 <tbody>
+
+             </tbody>
+		</table>
+		
+	</div>
+</body>
+</html>

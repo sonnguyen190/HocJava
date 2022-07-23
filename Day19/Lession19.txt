@@ -1,0 +1,323 @@
+﻿---DAY19---
+
+1/ throw
+throw dùng để quăng ra một exception cụ thể, exception này có thể là checked exception hoặc unchecked exception hoặc exception do mình tự tạo ra
+khi quăng là exception là unchecked exception -->ko cần khai báo throws tại phương thức quăng ra unchecked exception
+khi quăng là exception là checked exception -->phải khai báo throws tại phương thức quăng ra checked exception, phương thức nào gọi phương thức này phải khai báo throws hoặc try-catch
+khi quăng là exception là exception do mình tự tạo ra -->phải kiểm tra exception mình tạo ra kế thừa từ exception nào
+
+Lưu ý:
+Khi quăng ra một exception thì việc đầu tiên Java làm là nó sẽ tìm catch PHÙ HỢP để nhảy vào, nếu ko tìm đc bất kỳ một catch nào phù hợp thì nó sẽ làm chết chương trình
+
+2/ throws
+throws sẽ đem exception đó qua cho phương thức khác xử lý nếu throws ĐÚNG LOẠI exception
+khi throws exception ở phương thức khác thì exception đó phải bằng hoặc lớn hơn loại exception của phương thức nó gọi
+
+Ví dụ 1/
+
+public class Main {
+	
+	static void validate(int age) {
+		 if (age <= 0) {
+			 throw new ArithmeticException("Age should be greater than 0.");//chương trình sẽ quăng ra lỗi ArithmeticException(unchecked exception), vì ko có try-catch xử lý nên chương trình bị chết
+			 System.out.println("validate...");
+		 } else {
+			 System.out.println("Age is valid.");
+		 }
+    }
+ 
+    public static void main(String args[]) {
+        validate(0);
+        System.out.println("rest of the code...");
+    }
+}
+
+Ví dụ 2/
+
+public class Main {
+	
+	static void validate(int age) throws FileNotFoundException {
+		 if (age <= 0) {
+			 throw new FileNotFoundException("Age should be greater than 0.");//chương trình sẽ quăng ra lỗi FileNotFoundException(checked exception) -->phải khai báo throws FileNotFoundException tại phương thức validate(), phương thức main() gọi phương thức validate() nên phương thức main() cũng phải khai báo throws FileNotFoundException hoặc khai báo try-catch FileNotFoundException tại nơi gọi phương thức validate() -->ko đc throws hoặc try-catch exception khác
+			System.out.println("validate...");
+		 } else {
+			 System.out.println("Age is valid.");
+		 }
+    }
+ 
+    //Cách 1/ 
+    public static void main(String args[]) throws FileNotFoundException { //khai báo throws
+   	validate(0);
+        System.out.println("...");//vì ko có try-catch để xử lý nên nó sẽ làm chết chương trình và ko chạy dòng này.
+    }
+
+   //Cách 2/
+   public static void main(String args[]) {
+    	try {
+    		validate(0);//dùng try-catch
+	} catch (Exception e) {
+		System.out.println(e.getMessage());
+	}
+        System.out.println("...");//vì có try-catch để xử lý nên nó sẽ ko làm chết chương trình và chạy dòng này.
+    }
+}
+
+
+Ví dụ 3/
+
+public class Main {
+	
+	static void validate(int age) throws FileNotFoundException {
+		 if (age <= 0) {
+			 throw new FileNotFoundException("Age should be greater than 0.");
+			 System.out.println("validate...");
+		 } else {
+			 System.out.println("Age is valid.");
+		 }
+    	}
+
+	static void validate1(int age) throws FileNotFoundException {//validate1() gọi validate(), validate có throws nên validate1() cũng phải throws hoặc try-catch -->trong trường hợp này dùng throws
+		validate(age);
+    	}
+ 
+    public static void main(String args[]) throws FileNotFoundException {//main() gọi validate1(), validate1() có throws nên main() cũng phải throws hoặc try-catch -->trong trường hợp này dùng throws
+   	validate1(0);
+        System.out.println("...");//ko chạy dòng này
+    }
+
+}
+
+
+
+Ví dụ 4/
+
+public class Main {
+	
+	static void validate(int age) throws FileNotFoundException {
+		 if (age <= 0) {
+			 throw new FileNotFoundException("Age should be greater than 0.");
+			 System.out.println("validate...");	
+		 } else {
+			 System.out.println("Age is valid.");
+		 }
+    	}
+
+	static void validate1(int age) {//validate1() gọi validate(), validate có throws nên validate1() cũng phải throws hoặc try-catch -->trong trường hợp này dùng try-catch
+		try {
+    			validate(age);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+    	}
+ 
+    public static void main(String args[]) {//main() gọi validate1(), validate1() có ko throws nên main() cũng ko throws
+   	validate1(0);
+        System.out.println("...");//in ra dòng này
+    }
+
+}
+
+
+Ví dụ 5/
+
+public class Main {
+	
+	static void validate(int age) throws ArithmeticException {//throws đúng loại exception xảy ra
+		int a = 10 / 0;
+		System.out.println("validate...");
+    	}
+
+	static void validate1(int age) {
+		try {
+    			validate(age);
+		} catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+		}
+    	}
+ 
+    public static void main(String args[]) {
+   	validate1(0);
+        System.out.println("...");//in ra dòng này
+    }
+
+}
+
+
+Ví dụ 6/
+
+public class Main {
+	
+	static void validate(int age) throws FileNotFoundException {//throws ko đúng loại exception xảy ra -->kiểm tra xem có catch nào xử lý ArithmeticException exception ko, vì validate1() chỉ xử lý FileNotFoundException -->làm chết chương trình
+		int a = 10 / 0;
+		System.out.println("validate...");
+    	}
+
+	static void validate1(int age) {
+		try {
+    			validate(age);
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		}
+    	}
+ 
+    public static void main(String args[]) {
+   	validate1(0);
+        System.out.println("...");
+    }
+
+}
+
+
+Ví dụ 7/
+
+public class Main {
+	
+	static void validate(int age) throws FileNotFoundException {//throws ko đúng loại exception xảy ra -->kiểm tra xem có catch nào xử lý ArithmeticException exception ko, vì validate1() xử lý Exception -->ko làm chết chương trình
+		int a = 10 / 0;
+		System.out.println("validate...");
+    	}
+
+	static void validate1(int age) {
+		try {
+    			validate(age);
+		} catch (Exception e) {//có thể khai báo Exception tại đây vì Exception là cha của tất cả exception
+			System.out.println(e.getMessage());
+		}
+    	}
+ 
+    public static void main(String args[]) {
+   	validate1(0);
+        System.out.println("...");
+    }
+
+}
+
+
+Ví dụ 8/
+
+public class Main {
+	
+	static void validate(int age) throws Exception {
+		int a = 10 / 0;
+		System.out.println("validate...");
+    	}
+
+	static void validate1(int age) {
+		try {
+    			validate(age);
+		} catch (ArithmeticException e) {//lỗi tại compile time do ArithmeticException ko thể bắt tất cả lỗi của Exception
+			System.out.println(e.getMessage());
+		}
+    	}
+ 
+    public static void main(String args[]) {
+   	validate1(0);
+        System.out.println("...");
+    }
+
+}
+
+Ví dụ 9/
+
+public class Main {
+	
+	static void validate(int age) throws Exception {
+		int a = 10 / 0;
+		System.out.println("validate...");
+    	}
+
+	static void validate1(int age) throws ArithmeticException {//lỗi tại compile time do ArithmeticException ko thể bắt tất cả lỗi của Exception
+    		validate(age);
+		
+    	}
+ 
+    public static void main(String args[]) {
+   	validate1(0);
+        System.out.println("...");
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
